@@ -70,7 +70,7 @@ ThemeData basicTheme(int value, bool darkMode) {
       button: base.button.copyWith(
         fontFamily: "McLaren",
         fontSize: 12.0,
-        color: darkMode ? Colors.red : Colors.yellow,
+        color: darkMode ? Colors.black : Colors.white,
       ),
     );
   }
@@ -99,13 +99,22 @@ ThemeData basicTheme(int value, bool darkMode) {
         : (darkMode ? Colors.black : Colors.pink),
 
     accentColor: value == 1
-        ? (darkMode ? Colors.black : Colors.orangeAccent)
-        : (darkMode ? Colors.black : Colors.lightBlueAccent),
+        ? (darkMode ? Colors.black : Colors.blueAccent)
+        : (darkMode ? Colors.black : Colors.pinkAccent),
 
     brightness: darkMode ? Brightness.dark : Brightness.light,
 
     scaffoldBackgroundColor: darkMode ? Colors.grey : Colors.white,
 
-    
+    //set color for switch when active.
+    toggleableActiveColor: Colors.white,
+
+    buttonTheme: value == 1
+        ? (darkMode
+            ? ButtonThemeData(buttonColor: Colors.white)
+            : ButtonThemeData(buttonColor: Colors.blueAccent))
+        : (darkMode
+            ? ButtonThemeData(buttonColor: Colors.white)
+            : ButtonThemeData(buttonColor: Colors.pinkAccent)),
   );
 }
