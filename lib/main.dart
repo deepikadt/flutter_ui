@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
                   : (snapshot.data
                       ? basicTheme(2, true)
                       : basicTheme(2, false)),
-              home: MyHome(snapshot.data,colorSnapshot.data),
+              home: MyHome(snapshot.data, colorSnapshot.data),
             );
           }),
     );
@@ -35,7 +35,7 @@ class MyHome extends StatefulWidget {
   final bool darkThemeEnabled;
   final int appColorChanged;
 
-  MyHome(this.darkThemeEnabled,this.appColorChanged);
+  MyHome(this.darkThemeEnabled, this.appColorChanged);
 
   @override
   _MyHomeState createState() => _MyHomeState();
